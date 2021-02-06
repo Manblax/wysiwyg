@@ -21,12 +21,9 @@ export default {
   display: inline-flex;
   align-items: center;
   vertical-align: middle;
-
   padding: 0;
   cursor: pointer;
-
   border: none;
-
   background-color: transparent;
   box-shadow: none;
   font-size: 1rem;
@@ -41,7 +38,6 @@ export default {
 
 .image-button svg {
   display: block;
-
   width: 24px;
   height: 24px;
   flex-shrink: 0;
@@ -61,10 +57,6 @@ export default {
 
 .image-button--primary svg {
   fill: var(--action-element-color);
-}
-
-.image-button--primary:hover {
-
 }
 
 </style>

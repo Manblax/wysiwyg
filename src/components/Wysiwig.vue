@@ -58,7 +58,7 @@
       </Button>
       <Button @click="copyHtml">Скопировать HTML</Button>
     </div>
-    <FileInput @change="readFile"></FileInput>
+    <FileInput @change="uploadFile"></FileInput>
     <div contenteditable class="editor" ref="editor">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, recusandae?
     </div>
@@ -77,14 +77,14 @@ export default {
   },
   methods: {
     tag(event) {
-      console.log('tag')
+      console.log('tag');
       document.execCommand('formatBlock', false, event.currentTarget.dataset.tag);
     },
     bold() {
       document.execCommand('bold');
     },
     align(event) {
-      console.log('align')
+      console.log('align');
       document.execCommand(event.currentTarget.dataset.align);
     },
     copyHtml() {
@@ -94,22 +94,24 @@ export default {
       console.log(html);
     },
     undo() {
+      console.log('undo');
       document.execCommand('undo', false, '')
     },
     redo() {
+      console.log('redo');
       document.execCommand('redo', false, '')
     },
     addImage() {
-      console.log('image')
+      console.log('add image');
       const src = prompt('Введите URL изображения', '');
       if (!src) {
-        alert('URL пустой')
+        alert('URL пустой');
       } else {
         console.log('url', src);
         document.execCommand('insertImage', false, src);
       }
     },
-    readFile(file) {
+    uploadFile(file) {
       const fileUrl = URL.createObjectURL(file);
       this.$refs.editor.focus();
       document.execCommand('insertImage', false, fileUrl);

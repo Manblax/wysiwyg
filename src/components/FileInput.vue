@@ -4,7 +4,7 @@
     <label for="file" class="button button--primary upload__button" ref="label">
       Выберите файл
     </label>
-    <span class="upload__caption">Файл не выбран</span>
+    <span class="upload__caption">Файл не выбран {jpg|png}</span>
   </div>
 </template>
 
@@ -45,7 +45,6 @@ export default {
   font-family: inherit;
   font-size: 1rem;
   line-height: 1.5;
-
   display: inline-block;
   padding: 9px 20px;
   cursor: pointer;
