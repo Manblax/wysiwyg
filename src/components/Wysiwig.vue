@@ -30,17 +30,20 @@
         Скопировать HTML
       </Button>
     </div>
+    <FileInput @change="readFile"></FileInput>
     <div contenteditable class="editor" ref="editor">efewfe</div>
   </div>
 </template>
 
 <script>
 import Button from "@/components/Button";
+import FileInput from "@/components/FileInput";
 
 export default {
   name: "Wysiwig",
   components: {
-    Button
+    Button,
+    FileInput
   },
   methods: {
     heading() {
@@ -78,6 +81,12 @@ export default {
     },
     clear() {
       document.execCommand('clear');
+    },
+    readFile(file) {
+      const fileUrl = URL.createObjectURL(file);
+      this.$refs.editor.focus();
+      document.execCommand('insertImage', false, fileUrl);
+      console.log('fileUrl', fileUrl);
     }
   }
 }
