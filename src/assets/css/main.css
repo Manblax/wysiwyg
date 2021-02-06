@@ -1,0 +1,58 @@
+@import "variables.css";
+
+html {
+  font-size: 16px;
+  line-height: 1.5;
+
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'PT Russia', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  scroll-behavior: smooth;
+
+  margin: 0;
+  color: #ffffff;
+
+  background-color: var(--main-color);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.app {
+  max-width: 1920px;
+  padding: 100px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+h1 {
+  color: darkblue;
+}
+
+p {
+  color: aquamarine;
+}
+
