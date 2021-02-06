@@ -1,4 +1,4 @@
-# wysiwyg
+# Простой wysiwyg редактор
 
 ## Project setup
 ```
