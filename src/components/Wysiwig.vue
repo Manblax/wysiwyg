@@ -46,9 +46,19 @@
           <use xlink:href="@/assets/sprite.svg#heading-5"/>
         </svg>
       </Button>
+      <Button @click="tag" data-tag="h6">
+        <svg>
+          <use xlink:href="@/assets/sprite.svg#heading-6"/>
+        </svg>
+      </Button>
       <Button @click="bold">
         <svg>
           <use xlink:href="@/assets/sprite.svg#bold"/>
+        </svg>
+      </Button>
+      <Button @click="align" data-align="justifyLeft">
+        <svg>
+          <use xlink:href="@/assets/sprite.svg#align-left"/>
         </svg>
       </Button>
       <Button @click="align" data-align="justifyCenter">
@@ -56,9 +66,14 @@
           <use xlink:href="@/assets/sprite.svg#align-center"/>
         </svg>
       </Button>
-      <Button @click="align" data-align="justifyLeft">
+      <Button @click="align" data-align="justifyRight">
         <svg>
-          <use xlink:href="@/assets/sprite.svg#align-left"/>
+          <use xlink:href="@/assets/sprite.svg#align-right"/>
+        </svg>
+      </Button>
+      <Button @click="align" data-align="justifyFull">
+        <svg>
+          <use xlink:href="@/assets/sprite.svg#align-full"/>
         </svg>
       </Button>
       <Button @click="copyHtml">Скопировать HTML</Button>
