@@ -13,7 +13,7 @@
       </Button>
       <Button @click="tag" data-tag="h1">
         <svg>
-          <use xlink:href="@/assets/sprite.svg#t-icon"/>
+          <use xlink:href="@/assets/sprite.svg#heading-1"/>
         </svg>
       </Button>
       <Button @click="tag" data-tag="p">
@@ -39,6 +39,11 @@
       <Button @click="tag" data-tag="h4">
         <svg>
           <use xlink:href="@/assets/sprite.svg#heading-4"/>
+        </svg>
+      </Button>
+      <Button @click="tag" data-tag="h5">
+        <svg>
+          <use xlink:href="@/assets/sprite.svg#heading-5"/>
         </svg>
       </Button>
       <Button @click="bold">
@@ -125,10 +130,12 @@ export default {
 
 .controls {
   display: grid;
-  grid-template-columns: repeat(12, auto);
+  /* grid-template-columns: repeat(12, auto); */
   justify-content: start;
   align-content: center;
   grid-gap: 24px;
+  grid-auto-columns: max-content;
+  grid-auto-flow: column;
 }
 
 .editor {
