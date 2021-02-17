@@ -11,9 +11,9 @@
           <use xlink:href="@/assets/sprite.svg#go-back-arrow"/>
         </svg>
       </Button>
-      <Button @click="tag" data-tag="h1">
+      <Button @click="addImage">
         <svg>
-          <use xlink:href="@/assets/sprite.svg#heading-1"/>
+          <use xlink:href="@/assets/sprite.svg#image"/>
         </svg>
       </Button>
       <Button @click="tag" data-tag="p">
@@ -21,9 +21,9 @@
           <use xlink:href="@/assets/sprite.svg#paragraph"/>
         </svg>
       </Button>
-      <Button @click="addImage">
+      <Button @click="tag" data-tag="h1">
         <svg>
-          <use xlink:href="@/assets/sprite.svg#image"/>
+          <use xlink:href="@/assets/sprite.svg#heading-1"/>
         </svg>
       </Button>
       <Button @click="tag" data-tag="h2">
@@ -51,9 +51,19 @@
           <use xlink:href="@/assets/sprite.svg#heading-6"/>
         </svg>
       </Button>
-      <Button @click="bold">
+      <Button @click="com" data-com="bold">
         <svg>
           <use xlink:href="@/assets/sprite.svg#bold"/>
+        </svg>
+      </Button>
+      <Button @click="com" data-com="italic">
+        <svg>
+          <use xlink:href="@/assets/sprite.svg#italic"/>
+        </svg>
+      </Button>
+      <Button @click="com" data-com="underline">
+        <svg>
+          <use xlink:href="@/assets/sprite.svg#underline"/>
         </svg>
       </Button>
       <Button @click="align" data-align="justifyLeft">
@@ -100,8 +110,8 @@ export default {
       console.log('tag');
       document.execCommand('formatBlock', false, event.currentTarget.dataset.tag);
     },
-    bold() {
-      document.execCommand('bold');
+    com(event) {
+      document.execCommand(event.currentTarget.dataset.com);
     },
     align(event) {
       console.log('align');
